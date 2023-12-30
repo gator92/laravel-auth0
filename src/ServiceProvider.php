@@ -52,8 +52,8 @@ final class ServiceProvider extends \Illuminate\Support\ServiceProvider implemen
     {
         $this->publishes([implode(DIRECTORY_SEPARATOR, [__DIR__, '..', 'config', 'auth0.php']) => config_path('auth0.php')], 'auth0-config');
 
-        $auth->extend('auth0', static fn (): Guard => new Guard());
-        $auth->provider('auth0', static fn (): Provider => new Provider());
+        $auth->extend('auth0.guard', static fn (): Guard => new Guard());
+        $auth->provider('auth0.provider', static fn (): Provider => new Provider());
 
         $router->aliasMiddleware('auth0.authenticate', Authenticate::class);
         $router->aliasMiddleware('auth0.authenticate.optional', AuthenticateOptional::class);
