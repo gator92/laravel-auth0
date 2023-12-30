@@ -1,5 +1,5 @@
 {
-    "name": "gator92/auth0-login",
+    "name": "gator92/laravel-auth0",
     "description": "Auth0 Laravel SDK. Straight-forward and tested methods for implementing authentication, and accessing Auth0's Management API endpoints.",
     "license": "MIT",
     "keywords": [
